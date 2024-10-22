@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-10-19T17:05:01.567767" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste01" source="c:\Users\julia\OneDrive\Área de Trabalho\Alura\curso-robot\testes-robot\teste01.robot">
+<test id="s1-t1" name="Verificar se é possível criar mais de um card se preenchermos os campos corretamente" line="31">
+<kw name="Dado que acesse o organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:02.042948" level="INFO">Opening browser 'Edge' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T17:05:02.041949" elapsed="3.281706"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:02.040949" elapsed="3.282706"/>
+</kw>
+<kw name="Dado que preencha os campos do formulários">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:05.326655" level="INFO">Typing text 'Carol' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>Carol</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:05.325659" elapsed="0.259883"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:07.587235" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:05.586542" elapsed="2.001627"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:07.590168" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>Desenvolvedora</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:07.589164" elapsed="0.367922"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:09.960501" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:07.959088" elapsed="2.001413"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:09.961694" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>https://picsum.photos/200/300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:09.961694" elapsed="0.492172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:10.455883" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:10.454866" elapsed="0.187122"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:10.644463" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${OPCAO_PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:10.643039" elapsed="0.109868"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:15.754083" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:10.752907" elapsed="5.002190"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:05.324663" elapsed="10.430434"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:15.759383" level="INFO">Clicking button 'id:form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:15.759383" elapsed="0.195927"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:15.758373" elapsed="0.196937"/>
+</kw>
+<kw name="Então identificar 3 cards no time esperado">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Dado que preencha os campos do formulários">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:15.962859" level="INFO">Typing text 'Carol' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>Carol</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:15.961834" elapsed="0.364719"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:18.329205" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:16.327642" elapsed="2.001563"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:18.330332" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>Desenvolvedora</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:18.330332" elapsed="0.498705"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:20.831502" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:18.830041" elapsed="2.001974"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:20.833022" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>https://picsum.photos/200/300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:20.832015" elapsed="0.399429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:21.234131" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:21.233233" elapsed="0.168853"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:21.404561" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${OPCAO_PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:21.403083" elapsed="0.084518"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:26.489864" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:21.488712" elapsed="5.001733"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:15.960751" elapsed="10.530715"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:26.496307" level="INFO">Clicking button 'id:form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:26.495259" elapsed="0.296622"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:26.493133" elapsed="0.300257"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-10-19T17:05:15.959750" elapsed="10.833640"/>
+</iter>
+<iter>
+<kw name="Dado que preencha os campos do formulários">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:26.798430" level="INFO">Typing text 'Carol' into text field 'id:form-nome'.</msg>
+<arg>${CAMPO_NOME}</arg>
+<arg>Carol</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:26.797431" elapsed="0.310551"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:29.112161" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:27.109978" elapsed="2.003205"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:29.114177" level="INFO">Typing text 'Desenvolvedora' into text field 'id:form-cargo'.</msg>
+<arg>${CAMPO_CARGO}</arg>
+<arg>Desenvolvedora</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:29.113183" elapsed="0.206859"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:31.321963" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:29.320042" elapsed="2.002934"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:31.323985" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<arg>${CAMPO_IMAGEM}</arg>
+<arg>https://picsum.photos/200/300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:31.322976" elapsed="0.243808"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:31.567784" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<arg>${CAMPO_TIME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:31.566784" elapsed="0.191243"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:31.759032" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<arg>${OPCAO_PROGRAMACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:05:31.758027" elapsed="0.105723"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:05:36.865982" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:05:31.864736" elapsed="5.001246"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:26.795411" elapsed="10.071933"/>
+</kw>
+<kw name="E clique no botão criar card">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:05:36.868733" level="INFO">Clicking button 'id:form-botao'.</msg>
+<msg time="2024-10-19T17:05:36.876604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</msg>
+<msg time="2024-10-19T17:05:36.890168" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-10-19T17:05:36.868733" elapsed="0.300230">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-10-19T17:05:36.867344" elapsed="0.302578">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</kw>
+<var name="${i}">2</var>
+<status status="FAIL" start="2024-10-19T17:05:26.794428" elapsed="10.376437">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>3</value>
+<status status="FAIL" start="2024-10-19T17:05:15.958747" elapsed="21.212118">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-10-19T17:05:37.172164" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-19T17:05:15.956729" elapsed="21.215435">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T17:05:37.176196" elapsed="2.181686"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:05:37.175196" elapsed="2.183688"/>
+</kw>
+<status status="FAIL" start="2024-10-19T17:05:02.038568" elapsed="37.321314">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</status>
+</test>
+<status status="FAIL" start="2024-10-19T17:05:01.577970" elapsed="37.797604"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Teste01">Teste01</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-19T17:05:36.876604" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=130.0.2849.46)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6A854D095+12933]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A880FE14+2285364]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A874D7D6+1489142]
+	(No symbol) [0x00007FF6A82D84C7]
+	(No symbol) [0x00007FF6A835CB6D]
+	(No symbol) [0x00007FF6A8370CFA]
+	(No symbol) [0x00007FF6A83580E3]
+	(No symbol) [0x00007FF6A832FAE4]
+	(No symbol) [0x00007FF6A832EF90]
+	(No symbol) [0x00007FF6A832F6D1]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E4764+1058948]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6A84566B4+56500]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E3763+1054851]
+	Microsoft::Applications::Events::EventProperty::empty [0x00007FF6A86E33C9+1053929]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84E39E1+428481]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFC94+412788]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84DFDD9+413113]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6A84D5A06+371174]
+	BaseThreadInitThunk [0x00007FF9FCC3257D+29]
+	RtlUserThreadStart [0x00007FF9FED6AF08+40]
+</msg>
+</errors>
+</robot>
