@@ -50,7 +50,7 @@ Dado que preencha os campos do formulários
     ${Imagem}        FakerLibrary.Image Url    width=200    height=100
     Input Text       ${CAMPO_IMAGEM}     ${Imagem}
     Click Element    ${CAMPO_TIME}
-    Click Element    ${selecionar_time}[0]
+  #  Click Element    ${selecionar_time}[0] 
 
 E clique no botão criar card
     Click Button    ${BOTAO_CARD} 
